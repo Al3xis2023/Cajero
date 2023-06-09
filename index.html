@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <style>
+        #saldo {
+          font-weight: bold;
+        }
+      </style>
+    </head>
+    <body>
+      <h1>CAJERO ATM</h1>
+      <form id="formulario">
+        <label for="cuenta">Selecciona una cuenta:</label>
+        <select id="cuenta" required>
+          <option value="">Seleccione --</option>
+          <option value="usuario1">Mali</option>
+          <option value="usuario2">Gera</option>
+          <option value="usuario3">Maui</option>
+        </select>
+        <br><br>
+        <label for="password">Ingrese el password:</label>
+        <input type="password" id="password" required>
+        <br><br>
+        <button type="submit">Iniciar sesión</button>
+      </form>
+      <div id="opciones" style="display: none;">
+        <h2>Servicios:</h2>
+        
+        <button id="consultarSaldo">Consultar saldo</button>
+        <button id="ingresarMonto">Ingresar monto</button>
+        <button id="retirarMonto">Retirar monto</button>
+        
+        <br><br>
+        <p>Saldo actual: <span id="saldo"></span></p>
+      </div>
+      <p id="mensaje"></p>
+    
+      <script src="./main.js"></script>
+    </body>
+    </html>
